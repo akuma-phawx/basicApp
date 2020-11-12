@@ -32,14 +32,15 @@
       <div>
         <label for="category">Product Category:</label>
         <select name="category" id="category">
-          <option value="fruit" selected>Fruit</option>
-          <option value="vegetable">Vegetable</option>
-          <option value="dairy">Dairy</option>
+          <% for(let category of categories){ %>
+          <option value="<%=category%>" <%= product.category === category ? 'selected' : '' %> ><%=category%></option>
+          <%}%>
         </select>
       </div>
       <button type="submit">Update Product</button>
     </form>
 
     <a href="/products">All Products</a>
+    <a href="/products/<%=product._id  %> ">Cancel</a>
   </body>
 </html>
