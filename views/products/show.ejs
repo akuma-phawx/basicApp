@@ -11,6 +11,11 @@
       <li>Price: $<%= product.price %></li>
       <li>Category: <%= product.category %></li>
     </ul>
-    <a href="/products">All Products</a>
+    <div>
+      <a href="/products">All Products</a>
+    </div>
+    <div>
+      <a href="/products/<%= product._id %>/edit">Edit Product</a>
+    </div>
   </body>
 </html>
